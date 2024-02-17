@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            margin: 30px;
+        }
+
+        h3 {
+            font-size: 20px; 
+            color: lightgrey; /* Sets the color to light grey */
+        }
+        header {
+            background-color: #143e6c; 
+            padding: 10px 0;
+            color: #fff;
+            color: white;
+            text-align: center;
+        }
+
+                header {
+            background-color: #143e6c;
+            color: #fff;
+        
+            text-align: center;
+            width: 100%;
+        }
+
+        header nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #143e6c; /* Dark background for the nav bar */
+        }
+
+        header nav ul li {
+            float: left;
+        }
+
+        header nav ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        header nav ul li a:hover {
+            background-color: #111;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #143e6c;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .navbar-logo {
+            position: absolute;
+            top: 50px;  
+            right: 50px; 
+            height: 100px; 
+        }
+        .container {
+            display: flex;
+            max-width: 800px;
+            width: 100%;
+            }
+
+        .faq-section {
+            flex: 1;            
+            margin: 20px;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+        }
+
+        .question {
+            background-color: #143e6c;
+            color: #fff;
+            padding: 10px;
+            cursor: pointer;            
+            border: none;
+            text-align: left;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        .answer {
+            display: none;
+            padding: 10px;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            border-radius: 5px;
+            }
+
+        .answer p {
+            margin: 0;
+        }
+
+        .contact-section {
+            flex: 1;
+            margin: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label,
+        input,
+        textarea {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 8px;
+        }
+
+        button {
+            background-color: #143e6c;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #00994d;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="create_user.html">Create a User</a></li>
+                <li><a href="post.html">Post</a></li>
+                <li><a href="search.html">Search</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="faqs.html">FAQs</a></li>
+            </ul>
+            <img src="logo.jpg" alt="Logo" class="navbar-logo">
+        </nav>
+        <h1>Find Your Match</h1>
+        <h3> FAQs</h3>
+    </header>
+
+    <div class="container">
+
+        <div class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <button class="question">What sports does your app cover?</button>
+                <div class="answer">
+                    <p>We cover a wide range of sports, including popular ones like soccer, football, and many more. Our
+                        goal is to provide comprehensive coverage for sports enthusiasts.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="question">How can I find players near my location?</button>
+                <div class="answer">
+                    <p>Our app allows you to connect with like-minded individuals near your location. You can use the "Play
+                        Locally" feature to find fellow players, organize meet-ups, and enjoy playing your favorite sports
+                        together.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="question">Is there a fee to use the app?</button>
+                <div class="answer">
+                    <p>No, our app is free to download and use. However, there is a membership fee for access to certain
+                        matches and premium features. The fee helps support the platform and maintain high-quality
+                        services.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="question">How do I pay the membership fee?</button>
+                <div class="answer">
+                    <p>You can pay the membership fee securely through our app. Simply go to the Membership section and
+                        follow the instructions to complete the payment process.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="question">Can I receive alerts for my favorite teams?</button>
+                <div class="answer">
+                    <p>Yes, you can set up personalized alerts to receive breaking news and score updates for your favorite
+                        teams. Stay informed on the go!</p>
+                </div>
+            </div>
+
+        
+
+        </div>
+
+        <div class="contact-section">
+            <h2 class="contact-header">Did not receive the answer you were looking for?</h2>
+            <p class="contact-subtext">Contact our sales team for further assistance</p>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+    </div>
+
+    <footer>
+
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const questions = document.querySelectorAll('.question');
+
+            questions.forEach(question => {
+                question.addEventListener('click', function () {
+                    const answer = this.nextElementSibling;
+                    answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+                });
+            });
+        });
+    </script>
+    <footer>
+        <p>&copy; 2023 Find Your Match. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
+
+

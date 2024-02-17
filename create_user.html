@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>create_user</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body class="blue-background">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="create_user.html">Create a User</a></li>
+                <li><a href="post.html">Post</a></li>
+                <li><a href="search.html">Search</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="faqs.html">FAQs</a></li>
+            </ul>
+            <img src="logo.jpg" alt="Logo" class="navbar-logo">
+        </nav>
+        <h1>Find Your Match</h1>
+        <h2>Create Your Profile!</h2>
+    </header>
+    <div class="content">
+        <p>Fill in the required fields below to create your personalized profile.</p>
+        <form action="profile_created.html" method="post">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group half-width">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <div class="form-group half-width">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group half-width">
+                    <label for="zipcode">Zip Code:</label>
+                    <input type="text" id="zipcode" name="zipcode" required>
+                </div>
+
+                <div class="form-group half-width">
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" required>
+                </div>
+            </div>
+
+            <fieldset>
+                <legend>Preferred Sports:</legend>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="soccer" name="preferred_sports" value="soccer">
+                    <label for="soccer">Soccer</label>
+
+                    <input type="checkbox" id="basketball" name="preferred_sports" value="basketball">
+                    <label for="basketball">Basketball</label>
+
+                    <input type="checkbox" id="tennis" name="preferred_sports" value="tennis">
+                    <label for="tennis">Tennis</label>
+
+                    <input type="checkbox" id="volleyball" name="preferred_sports" value="volleyball">
+                    <label for="volleyball">Volleyball</label>
+
+
+                    <input type="checkbox" id="baseball" name="preferred_sports" value="baseball">
+                    <label for="baseball">Baseball</label>
+
+
+                    <input type="checkbox" id="football" name="preferred_sports" value="football">
+                    <label for="football">Football</label>
+                </div>
+            </fieldset>
+
+            <input type="submit" value="Create Profile">
+        </form>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer>
+        <p>2023 Find Your Match. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Confirmation</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        .content ul {
+            margin-bottom: 30px;
+        }
+
+        .content p {
+            margin-bottom: 130px; 
+        }
+
+        .content ul li {
+            color: white;
+        }
+    </style>
+</head>
+<body style="background: url('background.jpg') no-repeat center center fixed; background-size: cover;">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="create_user.html">Create a User</a></li>
+                <li><a href="post.html">Post</a></li>
+                <li><a href="search.html">Search</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="faqs.html">FAQs</a></li>
+            </ul>
+            <img src="logo.jpg" alt="Logo" class="navbar-logo">
+        </nav>
+        <h1>Match Found!</h1>
+    </header>
+
+    <div class="container">
+        <div class="content">
+            <p>Congratulations! Your reservation has been confirmed. Get ready to enjoy your sports experience at the selected venue. <br> Here are the details:</p>
+
+            <p><strong>Sport:</strong> <span id="sport"></span></p>
+            <p><strong>Address:</strong> <span id="address"></span></p>
+            <p><strong>Description:</strong> <span id="description"></span></p>
+            <p><strong>Contact Info:</strong> <span id="contactInfo"></span></p>
+
+            <p>Feel free to contact the venue and enjoy the game!</p>
+            <br>
+            <br>
+            <br>
+        </div>
+    </div>
+
+    <footer>
+        <p>2023 Find Your Match. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Function to parse URL parameters
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+
+        // Function to update the confirmation page with venue details
+        function updateConfirmationPage() {
+            var selectedVenue = getParameterByName('venue');
+            var venueData = {
+                "Urban Hub Soccer Court": {
+                    "sport": "Soccer",
+                    "address": "789 Oak Street, Metro City, USA",
+                    "description": "The Urban Hub Soccer Court is a small, urban soccer field located in the bustling Metro City. It provides a unique playing experience with its modern design and urban surroundings. This field is available for reservation, making it a popular choice for local soccer enthusiasts and pickup games.",
+                    "contactInfo": "555-123-4567"
+                },
+                "Suburban Sports Comple": {
+                    "sport": "Basketball",
+                    "address": "456 Elm Avenue, Suburbia, USA",
+                    "description": "The Suburban Sports Complex features a compact soccer field designed for convenience and accessibility. This mini-field is ideal for quick matches, skill development, and casual games. Residents of Suburbia can reserve this field for private use or community events.",
+                    "contactInfo": "563-654-2234"
+                },
+                "City Park Mini-Pitch": {
+                    "sport": "Soccer",
+                    "address": "123 Main Street, Washington DC, USA",
+                    "description": "City Park Mini-Pitch is a small, community-oriented soccer field located in the heart of Anytown. With a synthetic turf surface and surrounded by lush greenery, it's a perfect spot for small-sided games and training sessions. Individuals and local teams can reserve this field for recreational play. ",
+                    "contactInfo": "202-123-567"
+                }
+                // Can add more venues as needed
+            };
+
+            // Check if the selectedVenue is in the venueData
+            if (selectedVenue && venueData[selectedVenue]) {
+                // Update confirmation page with selected venue details
+                document.getElementById("sport").innerText = venueData[selectedVenue].sport;
+                document.getElementById("address").innerText = venueData[selectedVenue].address;
+                document.getElementById("description").innerText = venueData[selectedVenue].description;
+                document.getElementById("contactInfo").innerText = venueData[selectedVenue].contactInfo;
+            } else {
+                console.error("Invalid or missing venue parameter:", selectedVenue);
+            }
+        }
+
+        // Call the function to update the confirmation page when the page loads
+        window.onload = updateConfirmationPage;
+    </script>
+</body>
+</html>
+
+

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body style="background: url('background.jpg') no-repeat center center fixed; background-size: cover;">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="create_user.html">Create a User</a></li>
+                <li><a href="post.html">Post</a></li>
+                <li><a href="search.html">Search</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="faqs.html">FAQs</a></li>
+            </ul>
+            <img src="logo.jpg" alt="Logo" class="navbar-logo">
+        </nav>
+        <h1>Match Found!</h1>
+    </header>
+
+    <div class="container">
+        <div class="content">
+            <p>Congratulations! Your reservation has been confirmed. Get ready to enjoy your sports experience at the selected venue. <br> Here are the details:</p>
+
+            <!-- Display selected venue details dynamically -->
+            <p><strong>Venue Name:</strong> <span id="venueName"></span></p>
+            <p><strong>Sport Type:</strong> <span id="sportType"></span></p>
+            <p><strong>Address:</strong> <span id="address"></span></p>
+            <p><strong>Description:</strong> <span id="description"></span></p>
+            <p><strong>Contact Info:</strong> <span id="contactInfo"></span></p>
+
+            <p>Feel free to contact the venue and enjoy the game!</p>
+            <br>
+            <br>
+            <br>
+        </div>
+    </div>
+
+    <footer>
+        <p>2023 Find Your Match. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Function to update the confirmation page with form data
+        function updateConfirmationPage() {
+            // Access the form data from sessionStorage
+            var venueName = sessionStorage.getItem('venueName');
+            var sportType = sessionStorage.getItem('sportType');
+            var address = sessionStorage.getItem('address');
+            var description = sessionStorage.getItem('description');
+            var contactInfo = sessionStorage.getItem('contactInfo');
+
+            // Update spans with form data
+            document.getElementById("venueName").innerText = venueName;
+            document.getElementById("sportType").innerText = sportType;
+            document.getElementById("address").innerText = address;
+            document.getElementById("description").innerText = description;
+            document.getElementById("contactInfo").innerText = contactInfo;
+        }
+
+        // Call the function to update the confirmation page when the page loads
+        window.onload = updateConfirmationPage;
+    </script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Your App Name</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        header {
+            background-color: #143e6c;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .container {
+            max-width: 800px; /* Adjusted max-width */
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #143e6c;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            justify-content: center; /* Center the gallery */
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .image-container img {
+            max-width: 100%; /* Adjusted max-width for images */
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .image-container:hover img {
+            transform: scale(1.1);
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            border-radius: 5px;
+        }
+
+        .image-container:hover .overlay {
+            opacity: 1;
+        }
+
+        .overlay h3,
+        .overlay p {
+            color: #fff;
+            margin: 0;
+        }
+
+        .overlay h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .overlay p {
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .field-details {
+            color: #fff;
+            font-size: 14px;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        /* Zoom in the football field image */
+        .gallery-item:nth-child(2) .image-container img {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Gallery | Playpal</h1>
+    </header>
+
+    <div class="container">
+
+        <div class="gallery">
+            <!-- Soccer Field -->
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="soccer_field.jpg" alt="Soccer Field">
+                    <div class="overlay">
+                        <h3>Soccer Field</h3>
+                        <p>Experience the thrill of playing on our state-of-the-art soccer fields. Perfect for intense matches and
+                            friendly games alike.</p>
+                        <div class="field-details">Field Size: Standard FIFA Size</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Football Field -->
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="football_field.jpg" alt="Football Field">
+                    <div class="overlay">
+                        <h3>Football Field</h3>
+                        <p>Our football fields are designed for action-packed games. Feel the adrenaline as you dive into the world
+                            of American football.</p>
+                        <div class="field-details">Field Size: Regulation Size</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tennis Court -->
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="tennis_court.jpg" alt="Tennis Court">
+                    <div class="overlay">
+                        <h3>Tennis Court</h3>
+                        <p>Serve and volley on our professional tennis courts. Experience the precision and excitement of tennis
+                            matches.</p>
+                        <div class="field-details">Court Size: Standard Dimensions</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Basketball Court -->
+            <div class="gallery-item">
+                <div class="image-container">
+                    <img src="basketball_court.jpg" alt="Basketball Court">
+                    <div class="overlay">
+                        <h3>Basketball Court</h3>
+                        <p>Shoot hoops and enjoy fast-paced basketball games on our top-notch courts. Perfect for friendly matches
+                            and competitions.</p>
+                        <div class="field-details">Court Size: NBA Regulation Size</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Find Your Match. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
+
+

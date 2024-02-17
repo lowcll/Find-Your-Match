@@ -1,0 +1,147 @@
+/* styles1.css */
+
+/* Center the image in the div */
+div img {
+    display: block;
+    margin: auto; /* Remove the auto margin to place it on the left */
+    max-width: 200px; /* Adjust the size as needed */
+    height: auto; /* Maintains the aspect ratio */
+    margin-right: 20px; /* Add some margin for spacing */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #143e6c; 
+    padding: 10px 0;
+    color: white;
+    text-align: center;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #143e6c; /* Dark background for the nav bar */
+}
+
+header nav ul li {
+    float: left;
+}
+
+header nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    background-color: #111;
+}
+
+
+/* Style for the main content in the About Us page */
+main {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Group h2 elements into pairs and apply styling */
+.h2-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+h1 {
+    margin: 30px;
+}
+h2 {
+    color: #143e6c;
+    text-align: center;
+    background-color: #fff;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+    flex: 0 0 calc(50% - 20px); /* Each h2 takes 50% of the width with a 20px margin */
+    box-sizing: border-box;
+}
+h3 {
+    font-size: 20px; 
+    color: lightgrey; /* Sets the color to light grey */
+}
+
+/* Style for the form in the About Us page */
+form {
+    background-color: #f0f0f0;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+input[type="submit"] {
+    background-color: #143e6c;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #143e6c;
+}
+
+p {
+    text-align: center;
+}
+
+.field {
+    width: 60%;
+    margin: 0 auto; /* Center the fieldset horizontally */
+    padding: 20px; /* Add padding to the fieldset */
+    box-sizing: border-box; 
+}
+
+.navbar-logo {
+    position: absolute;
+    top: 50px;  
+    right: 50px; 
+    height: 100px; 
+    padding: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #143e6c;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

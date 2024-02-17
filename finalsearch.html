@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles2.css">
+    <title>Match Options</title>
+    <style>
+        .content {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .content p {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="create_user.html">Create a User</a></li>
+                <li><a href="post.html">Post</a></li>
+                <li><a href="search.html">Search</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="faqs.html">FAQs</a></li>
+            </ul>
+            <img src="logo.jpg" alt="Logo" class="navbar-logo">
+        </nav>
+        <h1>Match Options</h1>
+    </header>
+
+    <div class="container">
+        <div class="content">
+            <h3>Urban Hub Soccer Court</h3>
+            <p>Sport: Soccer</p>
+            <p>Address: 789 Oak Street, Metro City, USA</p>
+            <p>Description: The Urban Hub Soccer Court is a small, urban soccer field located in the bustling Metro City. It provides a unique playing 
+                experience with its modern design and urban surroundings. This field is available for reservation, making it a popular choice for local 
+                soccer enthusiasts and pickup games.
+            </p>
+            <p>Contact Info: 555-123-4567</p>
+            <button class="reserve-button" onclick="reserveVenue('Urban Hub Soccer Court')">Reserve</button>
+        </div>
+
+        <div class="content">
+            <h3>Suburban Sports Complex</h3>
+            <p>Sport: Tennis</p>
+            <p>Address: 456 Elm Avenue, Suburbia, USA</p>
+            <p>Description: The Suburban Sports Complex features a compact soccer field designed for convenience and accessibility. 
+                This mini-field is ideal for quick matches, skill development, and casual games. Residents of Suburbia can reserve this 
+                field for private use or community events.
+            </p>
+            <p>Contact Info: 563-654-2234</p>
+            <button class="reserve-button" onclick="reserveVenue('Suburban Sports Complex')">Reserve</button>
+        </div>
+
+        <div class="content">
+            <h3>City Park Mini-Pitch</h3>
+            <p>Sport: Soccer</p>
+            <p>Address: 123 Main Street, Washington DC, USA</p>
+            <p>Description: City Park Mini-Pitch is a small, community-oriented soccer field located in the heart of Anytown. 
+                With a synthetic turf surface and surrounded by lush greenery, it's a perfect spot for small-sided games and training sessions. 
+                Individuals and local teams can reserve this field for recreational play. 
+            </p>
+            <p>Contact Info: 202-123-567</p>
+            <button class="reserve-button" onclick="reserveVenue('City Park Mini-Pitch')">Reserve</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>2023 Find Your Match. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function reserveVenue(venue) {
+            var urlParams = new URLSearchParams(window.location.search);
+            var sport = urlParams.get('sport');
+            var zipcode = urlParams.get('zipcode');
+            var experience = urlParams.get('experience');
+            var age = urlParams.get('age');
+
+            window.location.href = 'confirmation.html?sport=' + encodeURIComponent(sport) + '&zipcode=' + encodeURIComponent(zipcode) + '&experience=' + encodeURIComponent(experience) + '&age=' + encodeURIComponent(age) + '&venue=' + encodeURIComponent(venue);
+        }
+    </script>
+</body>
+</html>

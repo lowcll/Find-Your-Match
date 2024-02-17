@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Post Your Venue</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body style="background: url('background.jpg') no-repeat center center fixed; background-size: cover;">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="create_user.html">Create a User</a></li>
+                <li><a href="post.html">Post</a></li>
+                <li><a href="search.html">Search</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="faqs.html">FAQs</a></li>
+            </ul>
+            <img src="logo.jpg" alt="Logo" class="navbar-logo">
+        </nav>
+        <h1>Find Your Match</h1>
+        <h2>Post Your Venue!</h2>
+    </header>
+    <div class="content">
+        <p>Provide details about your sports facility for others to find.</p>
+        <form action="confirmation2.html" method="post" onsubmit="return updateConfirmationPage()">
+            <label for="venue-name">Venue Name:</label>
+            <input type="text" id="venue-name" name="venue-name" required><br><br>
+        
+            <label for="sport-type">Sport Type:</label>
+            <select id="sport-type" name="sport-type">
+                <option value="soccer">Soccer</option>
+                <option value="basketball">Basketball</option>
+                <option value="tennis">Tennis</option>
+                <option value="volleyball">Volleyball</option>
+            </select><br><br>
+        
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required><br><br>
+        
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" rows="4" cols="50" required></textarea><br><br>
+        
+            <label for="contact-info">Contact Information:</label>
+            <input type="text" id="contact-info" name="contact-info" required><br><br>
+        
+            <input type="submit" value="Post Venue">
+        </form>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer>
+        <p>2023 Find Your Match. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Function to update the confirmation page with form data
+        function updateConfirmationPage() {
+            // Access the form elements directly
+            var venueName = document.getElementById('venue-name').value;
+            var sportType = document.getElementById('sport-type').value;
+            var address = document.getElementById('address').value;
+            var description = document.getElementById('description').value;
+            var contactInfo = document.getElementById('contact-info').value;
+
+            // Update confirmation page with form data
+            sessionStorage.setItem("venueName", venueName);
+            sessionStorage.setItem("sportType", sportType);
+            sessionStorage.setItem("address", address);
+            sessionStorage.setItem("description", description);
+            sessionStorage.setItem("contactInfo", contactInfo);
+
+            // Return true to allow the form to submit
+            return true;
+        }
+    </script>
+</body>
+</html>
